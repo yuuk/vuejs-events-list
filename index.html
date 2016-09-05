@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>vuejs + bootstrap实现事件添加功能</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">	
 	<style>
 		body{font-family:'microsoft yahei';}
 		.mt20{margin-top: 20px;}
+		[v-cloak]{display:none;}
 	</style>
 </head>
 <body>
@@ -37,7 +38,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-6" v-cloak>
 			<div class="list-group">
 				<a href="javascript:;" class="list-group-item" v-for="item in events">
 		            <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-bullhorn"></i> {{item.name}}</h4>
